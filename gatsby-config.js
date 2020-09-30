@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Panda Eats`
@@ -30,8 +34,8 @@ module.exports = {
       resolve: `gatsby-source-github-api`,
       options: {
         // token: required by the GitHub API
-        // token: '7370bdd5d95b2c9414a5bf04581fd8a066c36b4c',
-        token: 'demo',
+        // token: "0922cfabc6468392005ad57a77bcf5595fbc659a",
+        token: process.env.GATSBY_GITHUB_TOKEN,
         variables: {},
         graphQLQuery: `
           query {
