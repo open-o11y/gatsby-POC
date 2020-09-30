@@ -35,7 +35,7 @@ module.exports = {
       options: {
         // token: required by the GitHub API
         // token: "0922cfabc6468392005ad57a77bcf5595fbc659a",
-        token: process.env.DEMO,
+        token: process.env.GATSBY_TOKEN,
         variables: {},
         graphQLQuery: `
           query {
