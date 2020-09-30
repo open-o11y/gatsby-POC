@@ -17,6 +17,8 @@ jobs:
       #     GH_API_KEY: ${{ secrets.GITHUB_API_KEY }}
       #   run: yarn build
       - uses: enriikke/gatsby-gh-pages-action@v2
+        env:
+          GH_API_KEY: ${{ secrets.gh_api_key }}
         with:
           access-token: ${{ secrets.gh_api_key }}
           deploy-branch: gh-pages
