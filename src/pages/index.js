@@ -1,6 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import Layout from "../components/layout"
+import { Button } from 'antd'
 
 export default function Home({ data }) {
   return (
@@ -22,6 +23,8 @@ export default function Home({ data }) {
         </div>
         
       </div>
+
+      <Button type="primary">Primary Button</Button>
     </Layout>
   )
 }
