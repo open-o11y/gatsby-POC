@@ -30,25 +30,25 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-github-api`,
-    //   options: {
-    //     // token: required by the GitHub API
-    //     token: process.env.GH_API_KEY,
-    //     variables: {},
-    //     graphQLQuery: `
-    //       query {
-    //         repository(owner: "open-o11y", name: "opentelemetry-js") {
-    //           collaborators {
-    //             nodes {
-    //               name
-    //               avatarUrl
-    //             }
-    //           }
-    //         }
-    //       }
-    //     `
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        // token: required by the GitHub API
+        token: process.env.GH_API_KEY,
+        variables: {},
+        graphQLQuery: `
+          query {
+            repository(owner: "open-o11y", name: "opentelemetry-js") {
+              collaborators {
+                nodes {
+                  name
+                  avatarUrl
+                }
+              }
+            }
+          }
+        `
+      },
+    },
   ],
 }
