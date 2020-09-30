@@ -44,12 +44,12 @@ export default function Layout({ children }) {
         </h3>
       </Link>
       <ul style={{ listStyle: `none`, float: `right` }}>
-          <ListLink to="/">Home</ListLink>
-          <ListLink to="/about/">About</ListLink>
-          <ListLink to="/blog/">Blog</ListLink>
-          <ListLink to="/my-files/">My Files</ListLink>
-          <ListLink to="/design/">Design</ListLink>
-          <ListLink to="/contributors/">Contributors</ListLink>
+          <Link to="/" css={css`margin: 20px`}>Home</Link>
+          <Link to="/about/" css={css`margin: 20px`}>About</Link>
+          <Link to="/blog/" css={css`margin: 20px`}>Blog</Link>
+          <Link to="/my-files/" css={css`margin: 20px`}>My Files</Link>
+          <Link to="/design/" css={css`margin: 20px`} >Design</Link>
+          <Link to="/contributors/" css={css`margin: 20px`}>Contributors</Link>
         </ul>
       {children}
     </div>
