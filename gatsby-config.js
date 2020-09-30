@@ -8,6 +8,8 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+// const dotenv = require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: `Panda Eats`
@@ -34,7 +36,7 @@ module.exports = {
       resolve: `gatsby-source-github-api`,
       options: {
         // token: required by the GitHub API
-        token: process.env.gh_api_key,
+        token: process.env.GH_API_KEY,
         variables: {},
         graphQLQuery: `
           query {
