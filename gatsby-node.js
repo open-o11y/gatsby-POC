@@ -7,8 +7,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
   const { createNodeField } = actions
   
+  if(node.internal.type === `ContentYaml`){
+    console.log(node)
+  }
+
   if (node.internal.type === `MarkdownRemark`) {
-    // console.log(node.internal.type)
     // console.log(`\n`, fileNode.relativePath)
     // console.log(createFilePath({ node, getNode, basePath: `pages` }))
     

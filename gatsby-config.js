@@ -16,6 +16,13 @@ module.exports = {
   },
   pathPrefix: "/gatsby-POC",
   plugins: [
+    'gatsby-transformer-yaml',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./content`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -64,8 +71,13 @@ module.exports = {
             title: node => node.frontmatter.title,
             html: node => node.internal.content,
             slug: node => node.fields.slug,
-            summary: node => node.frontmatter.summary
+            summary: node => node.frontmatter.summary,
           },
+          ContentYaml: {
+            title: node => node.title,
+            slug: node => node.slug,
+            summary: node => node.summary,
+          }
         },
       },
     },
