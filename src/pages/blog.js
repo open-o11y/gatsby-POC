@@ -9,6 +9,8 @@ export default function Blog({ data }) {
   return (
     <Layout>
       <h1>Blogs</h1>
+      <Header></Header>
+      <br />
       <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
@@ -37,10 +39,6 @@ export default function Blog({ data }) {
             </Link>
           </div>
         ))}
-      <br />
-      <br />
-      <br />
-      <Header></Header>
     </Layout>
   )
 }

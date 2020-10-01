@@ -1,6 +1,5 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-
 import Search from "./search"
 
 const Header = () => (

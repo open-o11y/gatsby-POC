@@ -1,6 +1,7 @@
 ---
 title: "Code Blog Post"
 date: "2020-10-16"
+summary: "This is an example markdown file testing code"
 ---
 
 ``` python

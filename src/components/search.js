@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Index } from "elasticlunr"
 import { Link } from "gatsby"
+import { Input } from 'antd';
 
 // Search component
 export default class Search extends Component {
@@ -15,12 +16,13 @@ export default class Search extends Component {
   render() {
     return (
       <div>
-        <input type="text" value={this.state.query} onChange={this.search} />
+        <Input type="text" value={this.state.query} onChange={this.search} />
         <ul>
           {console.log(this.state.results)}
           {this.state.results.map(page => (
             <li key={page.id}>
               <Link to={page.slug}>{page.title}</Link>
+            <p>{page.summary}</p>
             </li>
           ))}
         </ul>
