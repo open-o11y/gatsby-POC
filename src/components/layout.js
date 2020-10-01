@@ -50,7 +50,7 @@ export default function Layout({ children }) {
           <Link to="/my-files/" css={css`margin: 20px`}>My Files</Link>
           <Link to="/design/" css={css`margin: 20px`} >Design</Link>
           <Link to="/contributors/" css={css`margin: 20px`}>Contributors</Link>
-        </ul>
+      </ul>
       {children}
     </div>
   )

@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Header from "../components/header"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 
@@ -36,6 +37,10 @@ export default function Blog({ data }) {
             </Link>
           </div>
         ))}
+      <br />
+      <br />
+      <br />
+      <Header></Header>
     </Layout>
   )
 }
